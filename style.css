@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #01194d, #1379d8);
+  }
+  
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(12, 12, 12, 0.555);
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(19, 17, 17, 0.9);
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 3px solid gray;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+#equal-btn {
+      background-color: rgb(13, 190, 28);
+  }
+
+  #equal-btn:hover {
+    background-color: rgb(11, 168, 24);
+}
+
+#opr-btn {
+    background-color: royalblue;
+}
+
+#opr-btn:hover {
+    background-color: rgb(41, 87, 223);
+}
+
+#del-btn {
+    background-color: rgb(233, 28, 28);
+}
+
+#del-btn:hover {
+    background-color: rgb(212, 0, 0);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: fit-content;
+    }
+  }
